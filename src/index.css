@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #e7e5eb, #e76a24);
+    background-repeat: no-repeat;
+}
+
+input{
+    color: #ff0000;    
+    background-color: rgb(251, 192, 45);
+    border-radius: 6px;
+    padding: 5px;
+    transform: scale(0.9);
+    transition:  all 300ms ease-in-out;
+}
+
+input:hover{
+    transform: scale(1);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
+}
+
+input::placeholder {
+    color: black;
+    opacity: 0.6; 
+}

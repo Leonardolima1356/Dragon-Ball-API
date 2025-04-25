@@ -1,0 +1,126 @@
+.s1{
+    width: 100%;
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fundo{
+    margin-top: 100px;
+    width: 300px;
+    height: auto;   
+    margin-bottom: 8px;
+}
+
+.wrapInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.textoDB{
+    font-size: 1.2rem;
+    width: 85vw;
+    text-align: center;
+    color: black;
+}
+
+.btP{
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transform: scale(1);
+}
+
+.btP:hover{
+    background-color: #ffaa00;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    transform: scale(1.2);
+}
+
+.botaoVideo{
+    color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0; /* Remover qualquer margem superior */
+    padding: 0.3rem;
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    transform: scale(0.9);
+    margin-bottom: 1rem;
+}
+
+.btVideo{
+    background-color: #00bfff;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+
+.btVideo:hover{
+    background-color: #009acd;
+    transform: scale(1.05);
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    margin-top: 1rem;
+}
+
+
+@media (min-width: 600px) {
+ 
+
+    input{
+    transform: scale(1.0);
+   }
+   iframe{
+    width: 90%;
+    height: 300px;
+   }
+
+}
+
+@media (min-width: 1000px) {
+    .textoDB{
+        width: 70%;
+    }
+
+    .fundo{
+        width: 600px;
+        height: auto;   
+       
+    }
+    
+    .wrapInfo{
+        margin-top: 2rem;
+        width: 50%;
+        height: auto;
+    }
+    .inicio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 5%;
+    }
+}
