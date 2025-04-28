@@ -3,7 +3,7 @@ import style from './menu.module.css'
 export const Menu = (props) => {
     return(
         <>
-        <nav className={`navegacao ${style.navBar}`}>
+        <nav className={`navegacao ${style['navBar']}`}>
             <div className={"container-fluid"}>
             <ul className={`menu ${style['nav-menu']}`}></ul>
                <li>

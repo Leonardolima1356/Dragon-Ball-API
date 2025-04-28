@@ -3,6 +3,11 @@ import imagem from "./assets/images/imagem.png"
 import style from "./App.module.css"
 import { useState } from 'react'
 
+import logoFacebook from './assets/images/facebook.png'
+import logoTwitter from './assets/images/twitter.png'
+import logoSite from './assets/images/icon_ball.png'
+import logoYoutube from './assets/images/youtube.png'
+
 
 function App() {
   const [botaoVideo, setBotaoVideo] = useState(false) 
@@ -27,14 +32,35 @@ function App() {
       </div>
     </div>
 
-    <div className={style.botaoVideo}>
-    {botao && <button className={style.btVideo} onClick={ () => {setBotaoVideo(true); }}>Quero ver!!!</button>}
-    {botaoVideo && <iframe width="400" height="350" src="https://www.youtube.com/embed/U3oMwgVpXXU?si=wq8LHt_Y_pCx_pVd" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-    picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>}
-    </div>
+    <div className={style.videoContainer}>
+    {botao && (
+        <button className={style.btVideo} onClick={() => setBotaoVideo(true)} aria-label="Assistir vídeo">
+            <span className={style.btText}>Quero ver!!!</span>
+        </button>
+    )}
     
+    {botaoVideo && (
+        <div className={style.videoWrapper}>
+            <iframe width="400" height="350" 
+                src="https://www.youtube.com/embed/U3oMwgVpXXU?si=wq8LHt_Y_pCx_pVd&autoplay=1" title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen className={style.videoIframe}></iframe>
+        </div>
+    )}
+</div>
     </section>
+    <footer className={style.footer}>
+        <div className={style.socialIcons}>
+          <a href="https://www.facebook.com/ToeiAnimationOfficial/?locale=pt_BR" aria-label="Facebook">
+            <img src={logoFacebook} alt="Facebook" className={style.socialLogo}/></a>
+          <a href="https://x.com/db_official_en" aria-label="Twitter">
+            <img src={logoTwitter} alt="Facebook" className={style.socialLogo}/></a>
+          <a href="https://en.dragon-ball-official.com/" aria-label="Official Site">
+            <img src={logoSite} alt="Facebook" className={style.socialLogo}/></a>
+          <a href="https://www.youtube.com/@dragonball_official" aria-label="YouTube">
+            <img src={logoYoutube} alt="Facebook" className={style.socialLogo}/></a>
+        </div>
+      </footer>
     </>
   )
 }
