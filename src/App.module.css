@@ -3,7 +3,7 @@
     min-height: 100vh;
     color: white;
     font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .inicio {
@@ -175,7 +175,6 @@
     filter: none;
     transform: translateY(-3px) scale(1.1);
 }
-
 
 @media (max-width: 768px) {
     .btVideo {
